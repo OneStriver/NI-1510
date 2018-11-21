@@ -11,6 +11,8 @@ import java.util.Map;
 
 import javax.jws.WebService;
 
+import org.apache.log4j.Logger;
+
 import com.sunkaisens.nms.entity.TerminalInfoConfigFileEntity;
 import com.sunkaisens.nms.ftp.FtpUtils;
 import com.sunkaisens.nms.notify.device.CncpDevPacketHandler;
@@ -35,6 +37,7 @@ import com.sunkaisens.nms.ws.objectXmlConvert.device.Device;
 @WebService(endpointInterface="com.sunkaisens.nms.ws.createFile.server.NmsNorthInterface",serviceName="NmsNorthInterface")
 public class NmsNorthInterfaceImpl implements NmsNorthInterface {
 	
+	private static Logger logger = Logger.getLogger(NmsNorthInterfaceImpl.class);
 	private static SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
 	private SendCncpMsgFactory sendCncpMsgFactory = SendCncpMsgFactory.getInstance();
 	private CncpTaskExecutor cncpTaskExecutor = new CncpTaskExecutor();
@@ -48,6 +51,7 @@ public class NmsNorthInterfaceImpl implements NmsNorthInterface {
 	 */
 	@Override
 	public boolean perfQueryMethod(String xml) {
+		logger.info("上级网管调用1510北向接口>>>>>>>>性能查询");
 		//清空数据
 		allPerfInfoList.clear();
 		//获取携带的系统名称
@@ -99,6 +103,7 @@ public class NmsNorthInterfaceImpl implements NmsNorthInterface {
 	 */
 	@Override
 	public boolean queryDeviceStatusMethod(String xml) {
+		logger.info("上级网管调用1510北向接口>>>>>>>>设备状态查询");
 		//清空数据
 		list.clear();
 		allDeviceStatusList.clear();
@@ -128,6 +133,7 @@ public class NmsNorthInterfaceImpl implements NmsNorthInterface {
 	 */
 	@Override
 	public boolean queryTerminalInfoConfigMethod(String xml) {
+		logger.info("上级网管调用1510北向接口>>>>>>>>查询终端信息配置(出入局配置)");
 		//第一步解析出参数系统名称
 		Object object = XMLUtil.convertXmlStrToObject(Session.class, xml);
 		Session sessionTempl = (Session)object;
@@ -159,6 +165,7 @@ public class NmsNorthInterfaceImpl implements NmsNorthInterface {
 	 */
 	@Override
 	public boolean terminalInfoUpdateNotifyMethod(String xml) {
+		logger.info("上级网管调用1510北向接口>>>>>>>>上级网管调用北向接口更新终端信息(出入局配置)发送消息到OMC");
 		String downloadObjectToXmlStr=null;
 		templeMap.clear();
 		//解析出上级网管发送的XML信息
