@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://queryDeviceStatus.webservice.sunkaisens.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="QueryDeviceStatusServiceService" targetNamespace="http://queryDeviceStatus.webservice.sunkaisens.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://queryDeviceStatus.webservice.sunkaisens.com/" elementFormDefault="unqualified" targetNamespace="http://queryDeviceStatus.webservice.sunkaisens.com/" version="1.0">
+
+  <xs:element name="queryDeviceStatusMethod" type="tns:queryDeviceStatusMethod"/>
+
+  <xs:element name="queryDeviceStatusMethodResponse" type="tns:queryDeviceStatusMethodResponse"/>
+
+  <xs:complexType name="queryDeviceStatusMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryDeviceStatusMethodResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="queryDeviceStatusMethod">
+    <wsdl:part element="tns:queryDeviceStatusMethod" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryDeviceStatusMethodResponse">
+    <wsdl:part element="tns:queryDeviceStatusMethodResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="QueryDeviceStatusService">
+    <wsdl:operation name="queryDeviceStatusMethod">
+      <wsdl:input message="tns:queryDeviceStatusMethod" name="queryDeviceStatusMethod">
+    </wsdl:input>
+      <wsdl:output message="tns:queryDeviceStatusMethodResponse" name="queryDeviceStatusMethodResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QueryDeviceStatusServiceServiceSoapBinding" type="tns:QueryDeviceStatusService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="queryDeviceStatusMethod">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="queryDeviceStatusMethod">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="queryDeviceStatusMethodResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QueryDeviceStatusServiceService">
+    <wsdl:port binding="tns:QueryDeviceStatusServiceServiceSoapBinding" name="QueryDeviceStatusServicePort">
+      <soap:address location="http://localhost:8089/NTNMS/services/QueryDeviceStatus_Service"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

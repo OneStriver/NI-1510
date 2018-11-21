@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://queryInfoConfig.webservice.sunkaisens.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="QueryTerminalInfoConfigServiceService" targetNamespace="http://queryInfoConfig.webservice.sunkaisens.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://queryInfoConfig.webservice.sunkaisens.com/" elementFormDefault="unqualified" targetNamespace="http://queryInfoConfig.webservice.sunkaisens.com/" version="1.0">
+
+  <xs:element name="queryTerminalInfoConfigMethod" type="tns:queryTerminalInfoConfigMethod"/>
+
+  <xs:element name="queryTerminalInfoConfigMethodResponse" type="tns:queryTerminalInfoConfigMethodResponse"/>
+
+  <xs:complexType name="queryTerminalInfoConfigMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryTerminalInfoConfigMethodResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="queryTerminalInfoConfigMethod">
+    <wsdl:part element="tns:queryTerminalInfoConfigMethod" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryTerminalInfoConfigMethodResponse">
+    <wsdl:part element="tns:queryTerminalInfoConfigMethodResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="QueryTerminalInfoConfigService">
+    <wsdl:operation name="queryTerminalInfoConfigMethod">
+      <wsdl:input message="tns:queryTerminalInfoConfigMethod" name="queryTerminalInfoConfigMethod">
+    </wsdl:input>
+      <wsdl:output message="tns:queryTerminalInfoConfigMethodResponse" name="queryTerminalInfoConfigMethodResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QueryTerminalInfoConfigServiceServiceSoapBinding" type="tns:QueryTerminalInfoConfigService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="queryTerminalInfoConfigMethod">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="queryTerminalInfoConfigMethod">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="queryTerminalInfoConfigMethodResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QueryTerminalInfoConfigServiceService">
+    <wsdl:port binding="tns:QueryTerminalInfoConfigServiceServiceSoapBinding" name="QueryTerminalInfoConfigServicePort">
+      <soap:address location="http://localhost:8089/NTNMS/services/QueryTerminalInfoConfig_Service"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

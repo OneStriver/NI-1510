@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://infoUpdateNotify.webservice.sunkaisens.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="TerminalInfoUpdateNotifyServiceService" targetNamespace="http://infoUpdateNotify.webservice.sunkaisens.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://infoUpdateNotify.webservice.sunkaisens.com/" elementFormDefault="unqualified" targetNamespace="http://infoUpdateNotify.webservice.sunkaisens.com/" version="1.0">
+
+  <xs:element name="terminalInfoUpdateNotifyMethod" type="tns:terminalInfoUpdateNotifyMethod"/>
+
+  <xs:element name="terminalInfoUpdateNotifyMethodResponse" type="tns:terminalInfoUpdateNotifyMethodResponse"/>
+
+  <xs:complexType name="terminalInfoUpdateNotifyMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="terminalInfoUpdateNotifyMethodResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="terminalInfoUpdateNotifyMethod">
+    <wsdl:part element="tns:terminalInfoUpdateNotifyMethod" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="terminalInfoUpdateNotifyMethodResponse">
+    <wsdl:part element="tns:terminalInfoUpdateNotifyMethodResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TerminalInfoUpdateNotifyService">
+    <wsdl:operation name="terminalInfoUpdateNotifyMethod">
+      <wsdl:input message="tns:terminalInfoUpdateNotifyMethod" name="terminalInfoUpdateNotifyMethod">
+    </wsdl:input>
+      <wsdl:output message="tns:terminalInfoUpdateNotifyMethodResponse" name="terminalInfoUpdateNotifyMethodResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TerminalInfoUpdateNotifyServiceServiceSoapBinding" type="tns:TerminalInfoUpdateNotifyService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="terminalInfoUpdateNotifyMethod">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="terminalInfoUpdateNotifyMethod">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="terminalInfoUpdateNotifyMethodResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TerminalInfoUpdateNotifyServiceService">
+    <wsdl:port binding="tns:TerminalInfoUpdateNotifyServiceServiceSoapBinding" name="TerminalInfoUpdateNotifyServicePort">
+      <soap:address location="http://localhost:8089/NTNMS/services/TerminalInfoUpdateNotify_Service"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

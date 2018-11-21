@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://Routing.webservice.com"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http"
+	name="Routing_Service" targetNamespace="http://Routing.webservice.com">
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:tns="http://Routing.webservice.com" elementFormDefault="qualified"
+			targetNamespace="http://Routing.webservice.com" version="1.0">
+			<xs:element name="rptKeyDef" type="tns:rptKeyDef" />
+			<xs:element name="rptKeyDefResponse" type="tns:rptKeyDefResponse" />
+			<xs:element name="rptRoutingInfo" type="tns:rptRoutingInfo" />
+			<xs:element name="rptRoutingInfoResponse" type="tns:rptRoutingInfoResponse" />
+			<xs:element name="rptRoutingMsg" type="tns:rptRoutingMsg" />
+			<xs:element name="rptRoutingMsgResponse" type="tns:rptRoutingMsgResponse" />
+			<xs:element name="rptTermInfo" type="tns:rptTermInfo" />
+			<xs:element name="rptTermInfoResponse" type="tns:rptTermInfoResponse" />
+			<xs:element name="rstKeyDef" type="tns:rstKeyDef" />
+			<xs:element name="rstKeyDefResponse" type="tns:rstKeyDefResponse" />
+			<xs:element name="rstRoutingInfo" type="tns:rstRoutingInfo" />
+			<xs:element name="rstRoutingInfoResponse" type="tns:rstRoutingInfoResponse" />
+			<xs:element name="rstTermInfo" type="tns:rstTermInfo" />
+			<xs:element name="rstTermInfoResponse" type="tns:rstTermInfoResponse" />
+			<xs:complexType name="rptRoutingInfo">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="arg0" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rptRoutingInfoResponse">
+				<xs:sequence>
+					<xs:element name="return" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rstTermInfo">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="arg0" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rstTermInfoResponse">
+				<xs:sequence>
+					<xs:element name="return" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rstRoutingInfo">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="arg0" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rstRoutingInfoResponse">
+				<xs:sequence>
+					<xs:element name="return" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rptRoutingMsg">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="arg0" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rptRoutingMsgResponse">
+				<xs:sequence>
+					<xs:element name="return" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rstKeyDef">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="arg0" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rstKeyDefResponse">
+				<xs:sequence>
+					<xs:element name="return" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rptKeyDef">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="arg0" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rptKeyDefResponse">
+				<xs:sequence>
+					<xs:element name="return" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rptTermInfo">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="arg0" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="rptTermInfoResponse">
+				<xs:sequence>
+					<xs:element name="return" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="rptRoutingInfo">
+		<wsdl:part element="tns:rptRoutingInfo" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rstKeyDefResponse">
+		<wsdl:part element="tns:rstKeyDefResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rptRoutingInfoResponse">
+		<wsdl:part element="tns:rptRoutingInfoResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rstTermInfo">
+		<wsdl:part element="tns:rstTermInfo" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rstRoutingInfo">
+		<wsdl:part element="tns:rstRoutingInfo" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rstRoutingInfoResponse">
+		<wsdl:part element="tns:rstRoutingInfoResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rptRoutingMsg">
+		<wsdl:part element="tns:rptRoutingMsg" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rptTermInfoResponse">
+		<wsdl:part element="tns:rptTermInfoResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rptRoutingMsgResponse">
+		<wsdl:part element="tns:rptRoutingMsgResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rstTermInfoResponse">
+		<wsdl:part element="tns:rstTermInfoResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rstKeyDef">
+		<wsdl:part element="tns:rstKeyDef" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rptKeyDef">
+		<wsdl:part element="tns:rptKeyDef" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rptKeyDefResponse">
+		<wsdl:part element="tns:rptKeyDefResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="rptTermInfo">
+		<wsdl:part element="tns:rptTermInfo" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="RoutingWebService">
+		<wsdl:operation name="rptRoutingInfo">
+			<wsdl:input message="tns:rptRoutingInfo" name="rptRoutingInfo">
+			</wsdl:input>
+			<wsdl:output message="tns:rptRoutingInfoResponse" name="rptRoutingInfoResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rstTermInfo">
+			<wsdl:input message="tns:rstTermInfo" name="rstTermInfo">
+			</wsdl:input>
+			<wsdl:output message="tns:rstTermInfoResponse" name="rstTermInfoResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rstRoutingInfo">
+			<wsdl:input message="tns:rstRoutingInfo" name="rstRoutingInfo">
+			</wsdl:input>
+			<wsdl:output message="tns:rstRoutingInfoResponse" name="rstRoutingInfoResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rptRoutingMsg">
+			<wsdl:input message="tns:rptRoutingMsg" name="rptRoutingMsg">
+			</wsdl:input>
+			<wsdl:output message="tns:rptRoutingMsgResponse" name="rptRoutingMsgResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rstKeyDef">
+			<wsdl:input message="tns:rstKeyDef" name="rstKeyDef">
+			</wsdl:input>
+			<wsdl:output message="tns:rstKeyDefResponse" name="rstKeyDefResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rptKeyDef">
+			<wsdl:input message="tns:rptKeyDef" name="rptKeyDef">
+			</wsdl:input>
+			<wsdl:output message="tns:rptKeyDefResponse" name="rptKeyDefResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rptTermInfo">
+			<wsdl:input message="tns:rptTermInfo" name="rptTermInfo">
+			</wsdl:input>
+			<wsdl:output message="tns:rptTermInfoResponse" name="rptTermInfoResponse">
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="Routing_ServiceSoapBinding" type="tns:RoutingWebService">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="rptRoutingInfo">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="rptRoutingInfo">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="rptRoutingInfoResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rstTermInfo">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="rstTermInfo">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="rstTermInfoResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rstRoutingInfo">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="rstRoutingInfo">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="rstRoutingInfoResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rptRoutingMsg">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="rptRoutingMsg">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="rptRoutingMsgResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rstKeyDef">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="rstKeyDef">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="rstKeyDefResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rptKeyDef">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="rptKeyDef">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="rptKeyDefResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rptTermInfo">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="rptTermInfo">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="rptTermInfoResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="Routing_Service">
+		<wsdl:port binding="tns:Routing_ServiceSoapBinding" name="Routing-EndPoint">
+			<soap:address location="http://localhost:8089/NTNMS/services/Routing_Service" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
