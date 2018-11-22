@@ -34,7 +34,7 @@ import com.sunkaisens.nms.ws.objectXmlConvert.Session;
 import com.sunkaisens.nms.ws.objectXmlConvert.XMLUtil;
 import com.sunkaisens.nms.ws.objectXmlConvert.device.Device;
 
-@WebService(endpointInterface="com.sunkaisens.nms.ws.createFile.server.NmsNorthInterface",serviceName="NmsNorthInterface")
+@WebService(targetNamespace="http://www.sunkaisens.com/",endpointInterface = "com.sunkaisens.nms.ws.createFile.server.NmsNorthInterface",serviceName="NmsNorthInterface")
 public class NmsNorthInterfaceImpl implements NmsNorthInterface {
 	
 	private static Logger logger = Logger.getLogger(NmsNorthInterfaceImpl.class);

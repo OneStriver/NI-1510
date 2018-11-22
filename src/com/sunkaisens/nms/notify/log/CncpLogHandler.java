@@ -18,7 +18,7 @@ import com.sunkaisens.nms.ws.objectXmlConvert.log.LogManage;
 import com.sunkaisens.nms.ws.objectXmlConvert.log.RptLog;
 
 /**
- * 日志上报服务 
+ * 日志上报服务
  */
 public class CncpLogHandler {
 	

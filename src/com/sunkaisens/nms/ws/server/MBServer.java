@@ -25,12 +25,12 @@ public class MBServer {
 		initMessageProcessThread();
 		//初始化接收UDP消息
 		OMCNetContext.getInstance().initialize();
-		// 发布webservice服务
+		//发布webservice服务
 		initService();
 		//定时删除日志
 		QuartzManager.addJob();
 		// 首先检测网络问题,上报心跳
-		QuartzManager.schedulerJob(10);
+		//QuartzManager.schedulerJob(10);
 	}
 
 	private static void initService() {
